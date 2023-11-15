@@ -1,28 +1,23 @@
-import FooterDiv from "./Components/FooterDiv/FooterDiv";
-import Job from "./Components/JobDiv/JobDiv";
-import NavBar from "./Components/NavBar/Navbar";
-import Search from "./Components/SearchDv/Search";
+import Search from "./Components/Search";
 import { Link, Route, RouterProvider } from "react-router-dom";
 import React from "react";
 import { createBrowserRouter, createRoutesFromElements } from "react-router-dom";
-import Home from "./Home";
+import Home from "./Pages/Home";
+import Agric from "./faculties/Agric";
+import Books from "./Pages/Books";
 
 const App = () => {
   const router = createBrowserRouter(createRoutesFromElements(
     <Route >path="/" 
       <Route index element={<Home />}/>
       <Route path="/search" element={<Search/>}/>
+      <Route path="/agric" element={<Agric/>}/>
+      <Route path="/books" element={<Books/>}/>
     </Route>
   ))
   return (
     <RouterProvider router={router}/>
-    // <div className="w-[85%] m-auto bg-white">
-    //   <Link>hi</Link>
-    //   <NavBar/>
-    //   <Search/>
-    //   <Job/>
-    //   <FooterDiv/>
-    // </div>
+
    );
 }
  

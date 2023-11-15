@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: white;
+}
+.links{
+  @apply mt-2 p-2 w-[100%] border-[1px] border-gray-500 rounded-md
+}
+.linkss{
+  @apply mt-2 p-2 w-[100%] border-[1px] bg-white border-[#8F2B2D] text-[#8F2B2D] rounded-md
+}
+.buttons{
+  @apply py-1 px-3 bg-[#10865C] text-white rounded-lg
+}
+.faculty{
+  @apply w-[100%] hover:bg-[#10865C] rounded-lg py-2 text-center hover:text-white px-2 h-[70px] flex items-center justify-center border-[1px] border-[#10865d46]
+}
+.main{
+  @apply w-[75%] ml-[20%] h-[94%] bg-white rounded-md shadow-sm p-[2%]
+}
+.dash{
+  background-image: url(./img/book-use.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @apply w-[100%] h-[200px]
+}
+.op{
+  background-color: #10865C;
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+}
+.dash-group{
+  @apply w-[100%] h-[100%] absolute top-0 p-3 text-white flex justify-center items-center flex-col
+}
+.return{
+  position: relative;
+  @apply w-[100%] h-[200px]
+}
+.dash-h{
+  @apply text-[35px] font-semibold
+}
+.dash-p{
+  @apply text-[25px]
+}
+.dash-sub{
+  @apply w-[100%] h-[100%] absolute top-0 p-3 text-white flex justify-center items-center flex-col
+}
