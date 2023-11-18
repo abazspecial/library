@@ -3,24 +3,30 @@ import NavBar from "../Components/Navbar";
 import { Link } from "react-router-dom";
 import Search from "../Components/Search";
 import { FaPlusCircle } from "react-icons/fa";
+import AddBook from "../Components/AddBook";
+import AddUser from "../Components/AddUser";
 
 const Home = () => {
+    const show = () =>{
+        document.getElementById("bookadd").style.display="flex"
+    }
     return ( 
-        <div className="flex h-[100vh] bg-[#F6F6F6] items-center relative">
-            <NavBar />
+       
+      
             <div className="main">
+                <AddUser />
                <div className="flex justify-between mb-[3%]">
                 <h1 className="text-[25px]">Admin</h1>
                </div>
 
                <div className="grid grid-cols-3 gap-4 w-[100%] mt-[3%]">
-               <Link to='' className="dash">
+               <button onClick={()=>{show()}} className="dash">
                 <div className="op"></div>
                 <div className="dash-group">
                     <h1 className="dash-h">Add User</h1>
                 </div>
          
-               </Link>
+               </button>
                <Link to='/books' className="dash"> 
                <div className="op"></div>
                <div className="dash-group">
@@ -29,7 +35,7 @@ const Home = () => {
                </div>
               
                </Link>
-               <Link to='' className="dash">
+               <Link to='/users' className="dash">
                 <div className="op"></div>
                 <div className="dash-group">
                     <h1 className="dash-h">10</h1>
@@ -37,24 +43,24 @@ const Home = () => {
                 </div>
                 
                </Link>
-               <Link to='' className="return">
-                <div className="op"></div>
+               <Link to='' className="return" id="issue">
+                <div className="opp"></div>
                 <div className="dash-sub">
                     <h1 className="dash-h">Issued</h1>
                     <p className="dash-p">0</p>
                 </div>         
                </Link>
-               <Link to='' className="return">
-                <div className="op"></div>
-                <div className="dash-sub">
+               <Link to='' className="return" id="ret">
+                <div className="opp"></div>
+                <div className="dash-sub" >
                     <h1 className="dash-h">Returned</h1>
                     <p className="dash-p">0</p>
                 </div>
                
                </Link>
-               <Link to='' className="return">
-                <div className="op"></div>
-                <div className="dash-sub">
+               <Link to='' className="return" id="notre">
+                <div className="opp"></div>
+                <div className="dash-sub" >
                     <h1 className="dash-h">Not Returned</h1>
                     <p className="dash-p">0</p>
                 </div>
@@ -66,8 +72,9 @@ const Home = () => {
 
                </div>
             </div>
-        </div>
+    
      );
+   
 }
  
 export default Home;

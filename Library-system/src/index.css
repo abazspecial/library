@@ -18,7 +18,8 @@ body{
   @apply w-[100%] hover:bg-[#10865C] rounded-lg py-2 text-center hover:text-white px-2 h-[70px] flex items-center justify-center border-[1px] border-[#10865d46]
 }
 .main{
-  @apply w-[75%] ml-[20%] h-[94%] bg-white rounded-md shadow-sm p-[2%]
+  overflow-y: auto;
+  @apply w-[80%]  h-[94%] bg-white rounded-md shadow-sm p-[2%]
 }
 .dash{
   background-image: url(./img/book-use.jpg);
@@ -38,6 +39,9 @@ body{
 }
 .return{
   position: relative;
+  background-position: right;
+  background-size: 90%;
+  background-repeat: no-repeat;
   @apply w-[100%] h-[200px]
 }
 .dash-h{
@@ -48,4 +52,55 @@ body{
 }
 .dash-sub{
   @apply w-[100%] h-[100%] absolute top-0 p-3 text-white flex justify-center items-center flex-col
+}
+#ret{
+  background-image: url(./img/returen.png);
+
+}
+#issue{
+  background-image: url(./img/issued1.png);
+}
+.opp{
+  background-color: #10865C;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+}
+#notre{
+  background-image: url(./img/notre.png);
+}
+.thead{
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  @apply bg-[#8F2B2D] p-[1%] text-white w-[10%] 
+}
+td{
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  padding: 1%;
+}
+.ttitle{
+  width: 25%;
+}
+.tauthor{
+  width: 20%;
+}
+.userbox{
+  border-bottom: 1px solid #4A4754;
+}
+select{
+  width: 50%;
+  height: 40px;
+  outline: none;
+  
+}
+option{
+  height: 40px;
+  position: absolute;
+}
+.addin{
+  @apply  bg-[#F6F6F6] mt-2 h-[40px] pl-2
+}
+#bookadd{
+  display: none;
 }
